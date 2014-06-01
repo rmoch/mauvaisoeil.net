@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Collectif Mauvais Œil</title>
+    <link rel="stylesheet" type="text/css" href="fonts/street-corner.css">
+    <link rel="stylesheet" type="text/css" href="css/kube.min.css">
+    <style type="text/css">
+    body {
+        background-color: #ccc;
+
+    }
+@media (min-width: 767px) {
+    .content {
+        width: 1024px;
+    }
+    .moto {
+        height: 206px;
+    }
+
+}
+
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        background-image: url(img/background.jpg);
+    }
+    .small {
+        font-family: "street_cornerregular";
+        font-size: 15px;
+        line-height: 18px
+    }
+    .medium {
+        font-family: "street_corner_semiboldregular";
+        font-size: 22px;
+    }
+    .medium2 {
+        font-family: "street_corner_semiboldregular";
+        font-size: 17px;
+    }
+    .big {
+        font-family: "street_corner_obliqueregular";
+        font-size: 27px;
+    }
+    .oblique {
+        font-family: "street_corner_obliqueregular";
+        font-size: 18px;
+    }
+    .moto div {
+        position: absolute;
+        top: 140px;
+    }
+    .moto img {
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+    .moto span {
+        font-style: italic;
+    }
+    .block {
+        min-height: 50px;
+        padding-left: 60px;
+        background-repeat: no-repeat;
+        background-position: 0 16px;
+        padding-top: 10px;
+    }
+    .block-black {
+        background-image: url(img/bullet-black-horiz2.png);
+    }
+    .block-orange {
+        background-image: url(img/bullet-orange-horiz.png);
+    }
+    .block-full-orange {
+        background-color: #fe8404;
+        margin-top: 16px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .block-full-orange h1 {
+        font-size: 25px;
+        padding-left: 16px;
+        padding-top: 16px;
+        margin-bottom: 20px;
+    }
+    .block-full-orange p {
+        font-family: "street_cornerregular";
+        margin-left: 60px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .block-slider {
+        margin-top: 20px;
+
+    }
+    div.line {
+        width: 98%;
+        height: 3px;
+        margin-left: 16px;
+        background-image: url(img/line.png);
+        background-repeat: repeat-x;
+        clear: both;
+    }
+    #actu {
+        margin-top: 100px;
+    }
+    #email {
+        height: 50px;
+        padding-top: 16px;
+        margin-bottom: 8px;
+    }
+    .white-circle {
+        background-image: url(img/bullet-black-horiz.png),
+                          url(img/white-circle.png);
+        background-repeat: no-repeat;
+        background-position: 0 10px,
+                             center;
+    }
+    .orange-circle {
+        background-image: url(img/bullet-orange-horiz.png),
+                          url(img/orange-circle.png);
+        background-repeat: no-repeat;
+        background-position: 0 10px,
+                             center;
+    }
+    .members {
+        list-style: none;
+        margin: 0;
+    }
+    .members li {
+        float: left;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+    .member-line {
+        margin-top: 20px;
+    }
+    .members li:hover .whoami {
+        display: block;
+        position: absolute;
+        margin-top: 65px;
+        width: 85px;
+        height: 20px;
+        color: white;
+        background-color: black;
+        opacity: 0.7;
+        text-align: center;
+        font-size: 12px;
+        font-family: street_cornerregular;
+
+    }
+    .whoami {
+        display: none;
+    }
+    .clear {
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="units-row">
+        <div class="unit-60">
+            <div class="collectif"><img src="img/collectif-mauvais-oeil.png"></div>
+        </div>
+        <div class="unit-40">
+        <div class="moto">
+            <div>
+                <img src="img/bullet-black-vert.png"><span class="small">&#171;C'est au pied du mur qu'on le voit mieux&#187;</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="units-row">
+        <div class="unit-40">
+            <div id="actu" class="line"></div>
+            <div class="block block-orange orange-circle">
+
+                <h1 class="big">Actu</h1>
+                <p class="text-centered">
+                <span class="medium">Même Lieu, Autre Image</span>
+                <br>
+                <span class="medium">épisode 3</span>
+                <br><br>
+
+                <span class="small">rendez-vous</span><span class="medium"> samedi 21 juin 2014</span><br>
+                <span class="small">à partir de 21h<br>
+                croisement rue Blanchard, rue Boucicaut<br>
+                92260 Fontenay-aux-Roses</span><br><br>
+                </p>
+            </div>
+            <div class="line"></div>
+            <div id="email" class="block block-black">
+                <span class="medium">collectif@mauvaisoeil.net</span>
+            </div>
+            <div class="line"></div>
+            <div class="block block-orange">
+                <span class="medium2">
+                    Vous connaissez des murs, des lieux,<br>
+                    où le collectif pourrait intervenir ?<br>
+                    Envoyez-nous l’adresse par mail ainsi<br>
+                    qu’une ou des photos de repérages !<br><br>
+                </span>
+            </div>
+            <div class="line"></div>
+            <div class="block block-black">
+                <h1 class="big">Membre</h1>
+                <ul class="members">
+                    <li><a href="http://www.astrig.fr/">
+                        <span class="whoami">Astrig</span><img src="img/members/astrig.png">
+                    </a></li>
+                    <li><a><span class="whoami">Richard Mo</span>
+                        <img src="img/members/richard-mo.png">
+                        </a></li>
+                    <li><a href="http://eiphotographies.com/">
+                        <span class="whoami">Emmanuel</span><img src="img/members/emmanuel.png"></a></li>
+                    <li><a href="http://www.patricelatron.com/">
+                        <span class="whoami">Patrice</span><img src="img/members/patrice.png"></a></li>
+                    <li>
+                        <span class="whoami">Patrice</span><img src="img/members/herve.png"></li>
+                    <li>
+                        <span class="whoami">Richard Ma</span><img src="img/members/richard-ma.png"></li>
+                    <li>
+                        <span class="whoami">Pierre</span><img src="img/members/pierre.png"></li>
+                    <li><a href="http://www.yannfanchvauleon.com/">
+                        <span class="whoami">Yann-Franch</span><img src="img/members/yann-franch.png"></a></li>
+                    <li><a href="http://www.anaisverspanart.com/">
+                        <span class="whoami">Anais</span><img src="img/members/anais.png"></a></li>
+                    <li><img src="img/members/no-one.png"></li>
+                    <li><img src="img/members/no-one.png"></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="line member-line"></div>
+
+        </div>
+        <div class="unit-60">
+            <div class="line"></div>
+            <div class="block block-orange white-circle">
+                <h1 class="big">Manifeste</h1>
+                <p class="small">
+                Mauvais Œil,<br>
+                l’oeil du photographe<br>
+                l’oeil qui découvre sous un jour nouveau un lieu familier.<br>
+                Mauvais, car incontrolable, intervenant là où on ne l’attend pas.<br>
+                <br>
+                Notre projet<br>
+                intervenir collectivement dans des lieux délaissés, «briser» les murs<br>
+                en les faisant vivre une heure, un joir, un mois, un an.<br>
+                Faire sortir la culture de son enclos institutionnel,<br>
+                réinventer des espaces de liberté, agir, créer, montrer, se parler...<br>
+                ... et laisser vivre.<br>
+                <br>
+                Une action multiforme.<br>
+                <br>
+                Restez à l’écoute, ouvrez les yeux.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="block block-orange">
+                <h1 class="big">Actions</h1>
+            </div>
+            <img src="img/meme-lieu.png">
+            <div class="block-full-orange">
+            <h1 class="big">Meme Lieu, Autre Image</h1>
+            <p class="small">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </p>
+            </div>
+
+            <div class="block-slider">
+                <div id="my-slider"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://beaverslider.com/code/current/beaverslider.js"></script>
+    <script src="http://beaverslider.com/code/current/beaverslider-effects.js"></script>
+    <script>
+
+        $(function(){
+          var slider = new BeaverSlider({
+            structure: {
+              container: {
+                id: "my-slider",
+                width: 700,
+                height: 420
+              }
+            },
+            content: {
+          images: [
+            "img/slider1/1.png",
+            "img/slider1/2.png",
+          ]
+            },
+            animation: {
+              effects: "fade",
+              interval: 1000
+            }
+          });
+        });
+
+    </script>
+    </body>
+</html>
