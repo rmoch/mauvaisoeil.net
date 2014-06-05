@@ -59,6 +59,13 @@
     .moto span {
         font-style: italic;
     }
+    .email {
+        color: black;
+        text-decoration: none;
+    }
+    .email:hover {
+        color: black;
+    }
     .block {
         min-height: 50px;
         padding-left: 60px;
@@ -93,8 +100,25 @@
     }
     .block-slider {
         margin-top: 20px;
+        height: 300px;
+        overflow-y: hidden;
+        overflow-x: scroll;
 
     }
+    .slider {
+        width: 100%;
+        background-color: #999;
+        width: 10000px;
+    }
+    .slider ul {
+        list-style: none;
+        margin: 0;
+    }
+    .slider li {
+        float: left;
+        margin-right: 16px;
+    }
+
     div.line {
         width: 98%;
         height: 3px;
@@ -194,7 +218,7 @@
             </div>
             <div class="line"></div>
             <div id="email" class="block block-black">
-                <span class="medium">collectif@mauvaisoeil.net</span>
+                <span class="medium"><a class="email" href="mailto:collectif@mauvaisoeil.net">collectif@mauvaisoeil.net</a></span>
             </div>
             <div class="line"></div>
             <div class="block block-orange">
@@ -220,11 +244,11 @@
                     <li><a href="http://www.patricelatron.com/">
                         <span class="whoami">Patrice</span><img src="img/members/patrice.png"></a></li>
                     <li>
-                        <span class="whoami">Hervé</span><img src="img/members/herve.png"></li>
+                        <a><span class="whoami">Hervé</span><img src="img/members/herve.png"></a></li>
                     <li>
-                        <span class="whoami">Richard Ma</span><img src="img/members/richard-ma.png"></li>
-                    <li>
-                        <span class="whoami">Pierre</span><img src="img/members/pierre.png"></li>
+                        <a><span class="whoami">Richard Ma</span><img src="img/members/richard-ma.png"></a></li>
+                    <li><a>
+                        <span class="whoami">Pierre</span><img src="img/members/pierre.png"></a></li>
                     <li><a href="http://www.yannfanchvauleon.com/">
                         <span class="whoami">Yann-Fanch</span><img src="img/members/yann-fanch.png"></a></li>
                     <li><a href="http://www.anaisverspanart.com/">
@@ -245,7 +269,7 @@
                 Mauvais Œil,<br>
                 L’oeil du photographe<br>
                 L’oeil qui découvre sous un jour nouveau un lieu familier.<br>
-                Mauvais, car incontrolable, intervenant là où on ne l’attend pas.<br>
+                Mauvais, car incontrêlable, intervenant là où on ne l’attend pas.<br>
                 <br>
                 Notre projet<br>
                 Intervenir collectivement dans des lieux délaissés, «briser» les murs<br>
@@ -265,7 +289,7 @@
             </div>
             <img src="img/meme-lieu.jpg">
             <div class="block-full-orange">
-            <h1 class="big">Meme Lieu, Autre Image</h1>
+            <h1 class="big">Même Lieu, Autre Image</h1>
             <p class="small">
             Espace ouvert sur la ville, lieu de passage au carrefour de nos trajets quotidiens, ce premier site nous a tout de suite paru évident. pour une multitudes de raisons:<br>
             - un espace d’exposition naturel, des murs qui nous tendent les bras, une ouverture sur la ville mais un lieu pourtant ignoré, si ce n’est des propriétaires de chiens et d’un ou deux graffeurs...<br>
@@ -277,49 +301,25 @@
             </div>
 
             <div class="block-slider">
-                <div id="my-slider"></div>
+                <div class="slider">
+                    <ul>
+                        <li><img src="img/slider1/1.png"></li>
+                        <li><img src="img/slider1/2.png"></li>
+                        <li><img src="img/slider1/3.png"></li>
+                        <li><img src="img/slider1/4.png"></li>
+                        <li><img src="img/slider1/5.png"></li>
+                        <li><img src="img/slider1/6.png"></li>
+                        <li><img src="img/slider1/7.png"></li>
+                        <li><img src="img/slider1/8.png"></li>
+                        <li><img src="img/slider1/9.png"></li>
+                        <li><img src="img/slider1/10.png"></li>
+                    </ul>
+                </div>
             </div>
-
 
         </div>
     </div>
 
 </div>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://beaverslider.com/code/current/beaverslider.js"></script>
-    <script src="http://beaverslider.com/code/current/beaverslider-effects.js"></script>
-    <script>
-
-        $(function(){
-          var slider = new BeaverSlider({
-            structure: {
-              container: {
-                id: "my-slider",
-                width: 700,
-                height: 420
-              }
-            },
-            content: {
-          images: [
-            "img/slider1/1.png",
-            "img/slider1/2.png",
-            "img/slider1/3.png",
-            "img/slider1/4.png",
-            "img/slider1/5.png",
-            "img/slider1/6.png",
-            "img/slider1/7.png",
-            "img/slider1/8.png",
-            "img/slider1/9.png",
-            "img/slider1/10.png",
-          ]
-            },
-            animation: {
-              effects: "fade",
-              interval: 1000
-            }
-          });
-        });
-
-    </script>
-    </body>
+</body>
 </html>
