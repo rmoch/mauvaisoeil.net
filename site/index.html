@@ -6,7 +6,9 @@
     <title>Collectif Mauvais Œil</title>
     <link rel="stylesheet" type="text/css" href="fonts/street-corner.css">
     <link rel="stylesheet" type="text/css" href="css/kube.min.css">
+    <link type="text/css" rel="stylesheet" href="lightSlider/css/lightSlider.css" />
     <style type="text/css">
+
     body {
         background-color: #ccc;
 
@@ -99,23 +101,15 @@
     }
     .block-slider {
         margin-top: 20px;
-        height: 300px;
-        overflow-y: hidden;
-        overflow-x: scroll;
 
     }
     .slider {
-        width: 100%;
-        background-color: #999;
-        width: 10000px;
     }
     .slider ul {
-        list-style: none;
         margin: 0;
     }
     .slider li {
-        float: left;
-        margin-right: 16px;
+        list-style: none;
     }
 
     div.line {
@@ -194,7 +188,7 @@
         <div class="unit-40">
         <div class="moto">
             <div>
-                <img src="img/bullet-black-vert.png"><span class="small">&#171;C'est au pied du mur, qu'on voit le mieux le mur.&#187;</span>
+                <img src="img/puce-orange-vertic.png"><span class="small">&#171;C'est au pied du mur, qu'on voit le mieux le mur.&#187;</span>
             </div>
         </div>
         </div>
@@ -261,21 +255,13 @@
             <div class="block block-orange white-circle">
                 <h1 class="big">Manifeste</h1>
                 <p class="small">
-                Mauvais Œil,<br>
-                L’oeil du photographe<br>
-                L’oeil qui découvre sous un jour nouveau un lieu familier.<br>
-                Mauvais, car incontrêlable, intervenant là où on ne l’attend pas.<br>
-                <br>
-                Notre projet<br>
-                Intervenir collectivement dans des lieux délaissés, «briser» les murs<br>
-                En les faisant vivre une heure, un soir, un mois, un an.<br>
-                Faire sortir la culture de son enclos institutionnel,<br>
-                Réinventer des espaces de liberté, agir, créer, montrer, se parler...<br>
-                ... et laisser vivre.<br>
-                <br>
-                Une action multiforme.<br>
-                <br>
-                Restez à l’écoute, ouvrez les yeux.
+
+
+                    Le collectif ‟Mauvais Oeil″ croise les regards, il est avant tout collectif, multiple et profondément inscrit dans les pratiques de l’image.<br><br>
+                    Il fait sortir la culture de son enclos institutionnel, investit des espaces de liberté, pour agir, créer, revendiquer, donner à voir et échanger.<bt><br>
+                    Il se veut autonome, sans attache politique, institutionnelle ou religieuse. Il aime à intervenir dans des lieux qui n’ont pas vocation à l’accueillir.<br><br>
+                    Il revendique l’espace public comme le lieu de rencontre et de partage de ses expressions.
+                    <br><br>
                 </p>
             </div>
             <div class="line"></div>
@@ -295,20 +281,17 @@
                 Vous connaissez des lieux où le collectif pourrait intervenir ? <a href="mailto:collectif@mauvaisoeil.net" class="contact">Contactez-nous</a>.
             </p>
             </div>
-
             <div class="block-slider">
                 <div class="slider">
-                    <ul>
-                        <li><img src="img/slider1/1.png"></li>
-                        <li><img src="img/slider1/2.png"></li>
-                        <li><img src="img/slider1/3.png"></li>
-                        <li><img src="img/slider1/4.png"></li>
-                        <li><img src="img/slider1/5.png"></li>
-                        <li><img src="img/slider1/6.png"></li>
-                        <li><img src="img/slider1/7.png"></li>
-                        <li><img src="img/slider1/8.png"></li>
-                        <li><img src="img/slider1/9.png"></li>
-                        <li><img src="img/slider1/10.png"></li>
+                    <ul id="lightSlider">
+                        <li data-thumb="img/slider1/1.png"><img src="img/slider1/1.png"></li>
+                        <li data-thumb="img/slider1/2.png"><img src="img/slider1/2.png"></li>
+                        <li data-thumb="img/slider1/3.png"><img src="img/slider1/3.png"></li>
+                        <li data-thumb="img/slider1/4.png"><img src="img/slider1/4.png"></li>
+                        <li data-thumb="img/slider1/5.png"><img src="img/slider1/5.png"></li>
+                        <li data-thumb="img/slider1/6.png"><img src="img/slider1/6.png"></li>
+                        <li data-thumb="img/slider1/7.png"><img src="img/slider1/7.png"></li>
+                        <li data-thumb="img/slider1/8.png"><img src="img/slider1/8.png"></li>
                     </ul>
                 </div>
             </div>
@@ -317,5 +300,19 @@
     </div>
 
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="lightSlider/js/jquery.lightSlider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightSlider").lightSlider({
+                slideWidth: 567,
+                gallery: true,
+                minSlide: 1,
+                maxSlide: 1,
+                currentPagerPosition: 'middle',
+                thumbWidth: 100,
+            });
+        });
+    </script>
 </body>
 </html>
