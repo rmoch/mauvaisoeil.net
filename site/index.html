@@ -54,11 +54,12 @@
         top: 140px;
     }
     .moto img {
-        vertical-align: middle;
-        margin-left: 20px;
+        vertical-align: bottom;
+        margin-left: 0;
     }
     .moto span {
         font-style: italic;
+        padding-top: 20px;
     }
     .email {
         color: black;
@@ -132,8 +133,8 @@
         background-image: url(img/bullet-black-horiz.png),
                           url(img/white-circle.png);
         background-repeat: no-repeat;
-        background-position: 0 10px,
-                             center;
+        background-position: 0 8px,
+                             center 30px;
     }
     .orange-circle {
         background-image: url(img/bullet-orange-horiz.png),
@@ -219,8 +220,8 @@
                 <span class="small">rendez-vous</span><br><span class="medium"> les 27 et 28 septembre 2014</span><br>
                 <span class="small">
                     A l'occasion des journées portes ouvertes<br>
-                    des ateliers d'artistes de Fontenay-aux-Roses
-                </span><br><br><span>&nbsp;</span>
+                    des ateliers d'artistes <br>de Fontenay-aux-Roses
+                </span><br><br>
                 </p>
             </div>
             <div class="line"></div>
@@ -231,7 +232,7 @@
             <div class="block block-black">
                 <h1 class="big">Membres</h1>
                 <ul class="members">
-                    <li><a href="http://www.astrig.fr/">
+                    <li><a target="_blank" href="http://www.astrig.fr/">
                         <span class="whoami">Astrig</span><img src="img/members/astrig.png">
                     </a></li>
                     <li><a><span class="whoami">Richard Mo</span>
@@ -267,7 +268,7 @@
                 <h1 class="big">Manifeste</h1>
                 <p class="small">
 
-
+                <br>
                     Le collectif ‟Mauvais Oeil″ croise les regards, il est avant tout collectif, multiple et profondément inscrit dans les pratiques de l’image.<br><br>
                     Il fait sortir la culture de son enclos institutionnel, investit des espaces de liberté, pour agir, créer, revendiquer, donner à voir et échanger.<bt><br>
                     Il se veut autonome, sans attache politique, institutionnelle ou religieuse. Il aime à intervenir dans des lieux qui n’ont pas vocation à l’accueillir.<br><br>
@@ -322,7 +323,10 @@
                 maxSlide: 1,
                 currentPagerPosition: 'middle',
                 thumbWidth: 100,
-            });
+                loop: true,
+                mode:'fade',
+                pause: 5000,
+            }).play();
         });
     </script>
 </body>
