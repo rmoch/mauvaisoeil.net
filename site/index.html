@@ -13,14 +13,14 @@
         background-color: #ccc;
 
     }
-@media (min-width: 767px) {
-    .content {
-        width: 1024px;
+    @media (min-width: 767px) {
+        .content {
+            width: 1024px;
+        }
+        .moto {
+            height: 206px;
+        }
     }
-    .moto {
-        height: 206px;
-    }
-}
 
     .content {
         margin-left: auto;
@@ -325,13 +325,12 @@
             $("#lightSlider").lightSlider({
                 slideWidth: 567,
                 gallery: true,
-                minSlide: 1,
-                maxSlide: 1,
                 currentPagerPosition: 'middle',
                 thumbWidth: 100,
                 loop: true,
-                mode:'fade',
+                mode: 'slide',
                 pause: 5000,
+                adaptiveHeight: true
             }).play();
         });
     </script>
