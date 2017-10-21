@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Collectif Mauvais Œil">
+
+    <meta property="og:site_name" content="Collectif Mauvais Œil" />
+    <meta property="og:url" content="http://mauvaisoeil.net" />
+    <meta property="og:title" content="Collectif Mauvais Œil" />
+    <meta property="og:description" content="C'est au pied du mur, qu'on voit le mieux le mur" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="/img/collectif-mauvais-oeil.png" />
+
+
+    <title>Collectif Mauvais Œil</title>
+    <link rel="icon" href="/img/Favicon_16.png">
+    <link rel="stylesheet" type="text/css" href="fonts/street-corner.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mo.css">
+</head>
+
+<body>
+    <div class="container content archives">
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="collectif">
+                    <a href='/'>
+                        <img src="img/collectif-mauvais-oeil.png" alt="logo du collectif Mauvais Œil" title="Retour à l'index du site" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="navigation">
+                    <a href="/" alt="Lien vers la page d'accueil" title="Vers la page d'accueil">
+                        <img src="img/arrow-left.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-md-10 offset-md-1 text-center">
+
+                <div class="archives-ico">
+                </div>
+
+                <div class="svg-container" style="height: 558px">
+                    <svg version="1.1" viewBox="0 0 798 558" preserveAspectRatio="xMinYMin meet" id="svg-content">
+                        <image x="0" y="0" width="798" height="558" xlink:href="/img/archives/carte-idf.png"></image>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div id="accordion" role="tablist">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <span class="code">Le code source de ce site est disponible sur
+            <a target="_blank" href="https://github.com/rmoch/mauvaisoeil.net">github.com</a>
+        </span>
+    </div>
+
+
+    <div class="modal fade" id="mlaiModal" tabindex="-1" role="dialog" aria-labelledby="mlaiModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="mlaiCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                        </div>
+                        <a class="carousel-control-prev" href="#mlaiCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédent</span>
+                        </a>
+                        <a class="carousel-control-next" href="#mlaiCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap4/js/bootstrap.min.js"></script>
+
+    <script>
+        var spots = [
+            {
+                id: 'friche_blanchard',
+                x: '200',
+                y: '470',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Friche Blanchard",
+                    events: [0, 1, 2, 5, 9],
+                    placement: 'top',
+                },
+                title: "épisode 1",
+                description: "...",
+            },
+            {
+                id: 'rue_demi_lune',
+                x: '180',
+                y: '490',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: 'Ruelle de la Demi Lune',
+                    events: [3, 5],
+                    placement: 'left',
+                }
+            },
+            {
+                id: 'arret_bus',
+                x: '210',
+                y: '500',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: 'Arrêt de bus de Fontenay-aux-Roses',
+                    events: [3, 7],
+                    placement: 'bottom',
+                }
+            },
+            {
+                id: 'cite_scaron',
+                x: '235',
+                y: '490',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: 'Cité Scaron',
+                    events: [3],
+                    placement: 'right',
+                }
+            },
+            {
+                id: 'quai',
+                x: '450',
+                y: '310',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Quai d'Austerlitz",
+                    events: [4, 8],
+                    placement: 'right',
+                }
+            },
+            {
+                id: 'rue_amelot',
+                x: '440',
+                y: '230',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Rue Amelot",
+                    events: [6, 7],
+                    placement: 'left',
+                }
+            },
+            {
+                id: 'rue_grange_aux_belles',
+                x: '470',
+                y: '210',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Rue de la Grange aux Belles",
+                    events: [7],
+                    placement: 'right',
+                }
+            },
+            {
+                id: 'bd_voltaire',
+                x: '430',
+                y: '180',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Boulevard Voltaire",
+                    events: [7],
+                    placement: 'top',
+                }
+            },
+            {
+                id: 'bd_richard_lenoir',
+                x: '400',
+                y: '200',
+                icon: '/img/archives/puce-orange-vertic.png',
+                popover: {
+                    title: "Boulevard Richard Lenoir",
+                    events: [7],
+                    placement: 'left',
+                }
+            }
+        ]
+        var events = [
+            {
+                id: 'mlai_ep1',
+                title: "épisode 1",
+                description: "Novembre 2013 Friche Blanchard à Fontenay-aux-Roses",
+                description_type: "Vidéo projection",
+                participant: "3",
+                duration: "45mn",
+                surface: "...",
+                images: ['01', '02', '03', '05', '06', '07', '08', '09']
+            },
+            {
+                id: 'mlai_ep2',
+                title: "épisode 2",
+                description: "Avril 2014 Friche Blanchard à Fontenay-aux-Roses",
+                description_type: "Vidéo projection",
+                participant: "8",
+                duration: "120mn",
+                surface: "",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+            },
+            {
+                id: 'mlai_ep3',
+                title: "épisode 3 - La Nuit la plus courte",
+                description: "Juin 2014 Friche Blanchard à Fontenay-aux-Roses",
+                description_type: "Vidéo projection et collage",
+                participant: "9",
+                duration: "80mn",
+                surface: "11m²",
+                images: ['01', '02', '03', '04', '05', '07', '08']
+            },
+            {
+                id: 'mlai_ep4',
+                title: "épisode 4 - Porte ouverte des artistes",
+                description: "Septembre 2014 - Fontenay-aux-Roses",
+                description_type: "Collage",
+                participant: "...",
+                duration: "4 mois",
+                surface: "40m²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+            },
+            {
+                id: 'mlai_ep5',
+                title: "épisode 5 - Végétation",
+                description: "Mars 2015 - Quai d'Austerlitz Paris 12e",
+                description_type: "Collage",
+                participant: "9",
+                duration: "15 mois",
+                surface: "64m²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+            },
+            {
+                id: 'mlai_ep6',
+                title: "épisode 6 - Retour aux sources",
+                description: "Mai 2015 - Friche Blanchard à Fontenay-aux-Roses",
+                description_type: "Vidéo projection et collage",
+                participant: "8",
+                duration: "8 mois",
+                surface: "44mm²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+            },
+            {
+                id: 'mlai_ep7',
+                title: "épisode 7 - Nuit blanche",
+                description: "Octobre 2015 - rue Amelot Paris 11e",
+                description_type: "Collage",
+                participant: "7",
+                duration: "2 mois",
+                surface: "42m²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+            },
+            {
+                id: 'mlai_ep8',
+                title: "épisode 8 - Hommage",
+                description: "Décembre 2015 - Paris 11e et Fontenay-aux-Roses",
+                description_type: "Collage",
+                participant: "7",
+                duration: "12 mois",
+                surface: "25m²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08']
+            },
+            {
+                id: 'mlai_ep9',
+                title: "épisode 9 - Végétation",
+                description: "Mai 2017 - Quai d'Austerlitz Paris 12e",
+                description_type: "Collage",
+                participant: "8",
+                duration: "2 mois",
+                surface: "67m²",
+                images: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+            },
+            {
+                id: 'mlai_ep10',
+                title: "épisode 10 - Demolition Party",
+                description: "Juillet 2017 - Friche Blanchard à Fontenay-aux-Roses",
+                description_type: "Vidéo projection",
+                participant: "7",
+                duration: "80min",
+                surface: "...",
+                images: ['01', '02', '03']
+            }
+        ]
+
+        // place events positions on map
+        for (var i = 0; i < spots.length; i++) {
+            var spot = spots[i];
+            var img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+            img.setAttributeNS(null, 'id', spot.id);
+            img.setAttributeNS(null, 'class', 'spot');
+            img.setAttributeNS(null, 'height', '46');
+            img.setAttributeNS(null, 'width', '27');
+            img.setAttributeNS('http://www.w3.org/1999/xlink', 'href', spot.icon);
+            img.setAttributeNS(null, 'x', spot.x);
+            img.setAttributeNS(null, 'y', spot.y);
+            img.setAttributeNS(null, 'visibility', 'visible');
+
+            $('svg').append(img);
+
+            // bind popovers and list events
+            $('#' + spot.id).popover({
+                'container': 'body',
+                'placement': spot.popover.placement,
+                'html': true,
+                'trigger': 'click',
+                'title': spot.popover.title,
+                'content': $('<ul>').append(
+                    spot.popover.events.map(function(idx) {
+                        return $('<li>').append($('<a>').attr({'data-toggle': 'collapse', href: '#collapse' + idx}).text(events[idx].title));
+                    })
+                )
+            }).on('shown.bs.popover', function(){
+                $('.spot').not(this).popover('hide'); // hide previous popover
+            });
+        }
+
+/*
+        var svg = $('svg')[0];
+        var pt = svg.createSVGPoint();
+        svg.addEventListener('mousemove',function(evt){
+            pt.x = evt.clientX; pt.y = evt.clientY;
+            var loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+            console.log(loc);
+        }, false);
+*/
+
+        var imagePath = function(mlai_id, name) {
+            return '/img/archives/photos/' + mlai_id + '/' + mlai_id + '_' + name + '.jpg'
+        }
+
+        // create events DOM
+        for (var i = 0; i < events.length; i++) {
+            var event = events[i];
+            html = $('<div>').attr({class: 'card card-archive'})
+                .append($('<div>').attr({class: 'card-header', role: 'tab', 'id': 'heading' + i})
+                    .append($('<a>').attr({'data-toggle': 'collapse', href: '#collapse' + i, 'aria-expanded': true, 'aria-controls': 'collapse' + i})
+                        .append($('<span>').attr({class: 'event-title black' }).text("Même Lieu, Autre Image"),
+                        $('<span>').attr({class: 'event-title orange' }).text(event.title)
+                        )
+                    )
+                )
+                .append($('<div>').attr({'id': 'collapse' + i, 'data-idx': i, class: 'collapse' + (!i ? ' show' : ''), role: 'tabpanel', 'aria-labelledby': 'heading' + i, 'data-parent': '#accordion'})
+                    .append($('<div>').attr({class: 'event-description'}).text(event.description),
+                        $('<div>').attr({class: 'card-body'})
+                            .append($('<div>').attr({class: 'wrapper'})
+                            .append(
+                            $('<div>').attr({class: 'poster' }).append($('<img>').attr({class: 'card-archive-poster clickable', src: '/img/archives/' + event.id + '.jpg'})),
+                            $('<div>').attr({class: 'infos'})
+                                .append($('<ul>').append(
+                                    $('<li>').append($('<img>').attr({src: '/img/archives/participants.png'})),
+                                    $('<li>').append($('<span>').attr({class: 'text' }).text(event.participant)),
+                                    $('<li>').append($('<img>').attr({src: '/img/archives/surface.png'})),
+                                    $('<li>').append($('<span>').attr({class: 'text' }).text(event.surface)),
+                                    $('<li>').append($('<img>').attr({src: '/img/archives/duree.png'})),
+                                    $('<li>').append($('<span>').attr({class: 'text' }).text(event.duration))
+                                )
+                            ),
+                            $('<div>').attr({class: 'gallery'})
+                                .append($('<ul>').attr({class: 'images'})
+                                    .append(
+                                    event.images.map(function (item, idx) {
+                                        return $('<li>').append($('<img>').attr({class: 'clickable', 'data-idx': idx, src: imagePath(this.id, item)}))
+                                    }.bind(event))
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            $('#accordion').append(html);
+        }
+        $('#accordion').on('shown.bs.collapse', function () {  // scroll to opening gallery
+            var panel = $(this).find('.show');
+            $('html, body').animate({
+                scrollTop: panel.offset().top
+            }, 300);
+
+        });
+
+        // when clicking on an image, show a modal with cotaining a carousel with all related images
+        $('img.clickable').on('click', function(e){
+            var event = events[$(this).parents('.collapse').data('idx')];
+            $('#mlaiModal .carousel-inner').empty().append(
+                $('<div>').attr({class: 'carousel-item' + ($(e.target).hasClass('card-archive-poster') ? ' active': '')}).append(
+                        $('<img>').attr({class: 'd-block w-75 m-auto', src: '/img/archives/' + event.id + '.jpg'})),
+                        event.images.map(function(item, idx){
+                            return $('<div>').attr({class: 'carousel-item' + (idx===$(e.target).data('idx') ? ' active' : '')})
+                                .append($('<img>').attr({class: 'd-block w-100', src: imagePath(this.id, item)}))
+                }.bind(event))
+            )
+
+            $('#mlaiCarousel').carousel()
+            $('.spot').popover('hide');  // hide all spots
+            $('#mlaiModal').modal({})
+        })
+
+    </script>
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-88382-29', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
