@@ -35,7 +35,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 30px;
-        background-image: url(/img/background.jpg);
+        background-image: url(../img/background.jpg);
         background-size: cover;
     }
     .small {
@@ -99,10 +99,10 @@
         padding-top: 10px;
     }
     .block-black {
-        background-image: url(/img/bullet-black-horiz.png);
+        background-image: url(../img/bullet-black-horiz.png);
     }
     .block-orange {
-        background-image: url(/img/bullet-orange-horiz.png);
+        background-image: url(../img/bullet-orange-horiz.png);
     }
     .block-full-orange {
         background-color: #fe8404;
@@ -140,7 +140,7 @@
         width: 95%;
         height: 3px;
         margin-left: 16px;
-        background-image: url(/img/line.png);
+        background-image: url(../img/line.png);
         background-repeat: repeat-x;
         clear: both;
     }
@@ -159,15 +159,15 @@
         margin-bottom: 16px;
     }
     .white-circle {
-        background-image: url(/img/bullet-black-horiz.png),
-                          url(/img/white-circle.png);
+        background-image: url(../img/bullet-black-horiz.png),
+                          url(../img/white-circle.png);
         background-repeat: no-repeat;
         background-position: 0 8px,
                              center 30px;
     }
     .orange-circle {
-        background-image: url(/img/bullet-orange-horiz.png),
-                          url(/img/orange-circle.png);
+        background-image: url(../img/bullet-orange-horiz.png),
+                          url(../img/orange-circle.png);
         background-repeat: no-repeat;
         background-position: 1px 10px,
                              center;
@@ -279,8 +279,8 @@ div.popover-body ul li a {
     font-style: italic;
 }
 .card-archive .card-header {
-    background: url(/img/archives/puce-noire-small.png) no-repeat,
-                url(/img/line.png) repeat-x;
+    background: url(../img/archives/puce-noire-small.png) no-repeat,
+                url(../img/line.png) repeat-x;
     background-position: 0 20px, 0 0;
     padding-left: 80px;
     padding-top: 12px;
